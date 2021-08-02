@@ -1,0 +1,71 @@
+body {
+    background-color: antiquewhite;
+}
+
+h1 {
+    font-size: 100px;
+    margin: auto;
+    text-align: center;
+    
+}
+
+#todo {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5%
+}
+
+#todo:hover #newItem{
+    text-align: left;
+    opacity: 50%;
+    font-size: 20px;
+}
+
+input {
+    background-color: transparent;
+    border: none;
+}
+
+input:focus {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.todoItem {
+    transition: all .2s ease-in-out;
+    margin-left: 25%;
+    color: #383838
+}
+
+.todoItem:hover{
+    transform: scale(1.05);
+}
+
+.todoItem:hover button {
+    opacity: 100%
+}
+
+#newItem {
+    opacity: 0%;
+    font-size: 20px
+}
+
+button {
+    opacity: 0;
+    transition: opacity .2s;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+input:checked + label{
+    text-decoration: line-through;
+}
+
+[type=checkbox]{
+    vertical-align:text-bottom;
+}
