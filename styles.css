@@ -37,21 +37,33 @@ input:focus {
 
 .todoItem {
     transition: all .2s ease-in-out;
-    margin-left: 25%;
-    color: #383838
+    margin-left: 7%;
+    color: #383838;
+    overflow-x: scroll;
+    width: 250px;
+    height: 20px;
 }
 
 .todoItem:hover{
     transform: scale(1.05);
 }
 
+
 .todoItem:hover button {
     opacity: 100%
 }
 
+.todoItem label {
+    display: inline-block;
+    overflow: scroll;
+    width: 200px;
+    vertical-align: top;
+}
+
 #newItem {
     opacity: 0%;
-    font-size: 20px
+    font-size: 20px;
+    transform: translateZ(0)
 }
 
 button {
