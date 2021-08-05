@@ -15,7 +15,7 @@ function updateDataAndDisplay(data){
     data["TODO"].forEach((e) => {
         nhtml += 
         `<tr> <div id = ${e.id} class = "todoItem">
-            <input type = "checkbox" id = ${e.id} ${e.status}>
+            <input onclick = "checkItem(${e.id})" type = "checkbox" id = ${e.id} ${e.status}>
             <label for = ${e.id}>${e.name}</label>
             <button class = "delete" onclick = "deleteItem(this)">⦻</button>
         </div> </tr>
@@ -71,6 +71,22 @@ function appendItem(input){
 
         updateDataAndDisplay(data)
     }
+}
+
+function checkItem(input){
+    let data = getTodoList()
+
+    for (let i = 0; i < data["TODO"].length; i++){
+        if (data["TODO"][i].id == input){
+            if(data["TODO"][i].status == "checked"){
+                data["TODO"][i].status = "unchecked"
+            } else if (data["TODO"][i].status = "unchecked"){
+                data["TODO"][i].status = "checked"
+            }
+        }
+    }
+
+    updateDataAndDisplay(data)
 }
 
 function getTodoList(){
