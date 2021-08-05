@@ -39,7 +39,6 @@ input:focus {
     transition: all .2s ease-in-out;
     margin-left: 7%;
     color: #383838;
-    overflow-x: scroll;
     width: 250px;
     height: 20px;
 }
@@ -56,8 +55,14 @@ input:focus {
 .todoItem label {
     display: inline-block;
     overflow: scroll;
+    text-overflow: ellipsis;
     width: 200px;
     vertical-align: top;
+    height: 20px;
+}
+
+.todoItem label:hover {
+    text-overflow:clip;
 }
 
 #newItem {
